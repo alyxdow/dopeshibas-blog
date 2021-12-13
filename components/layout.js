@@ -13,10 +13,10 @@ export default function Blog(props) {
   const sharedHead = (
     <Head>
       <meta property="og:title" content={meta.title} />
-      <meta property="og:site_name" content="Jared Palmer's blog" />
+      <meta property="og:site_name" content="Dope Shibas Blog" />
       <meta property="og:description" content={meta.description} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@jaredpalmer" />
+      <meta name="twitter:site" content="@dopeshibas" />
       <meta property="og:image" content={meta.og} />
     </Head>
   );
