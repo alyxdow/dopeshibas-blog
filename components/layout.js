@@ -12,13 +12,16 @@ export default function Blog(props) {
 
   const sharedHead = (
     <Head>
+      <title>{meta.title}</title>
       <meta property="og:title" content={meta.title} />
       <meta property="og:site_name" content="Dope Shibas Blog" />
       <meta property="og:description" content={meta.description} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@dopeshibas" />
       <meta property="og:image" content={meta.og} />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     </Head>
+    
   );
 
   if (route.startsWith('/blog')) {
@@ -28,7 +31,10 @@ export default function Blog(props) {
           {sharedHead}
           <Header />
           <div className="prose lg:prose-lg mx-auto px-4 py-8">
-            <MDXProvider components={components}>{children}</MDXProvider>
+            
+            <MDXProvider components={components}>
+            {children}
+            </MDXProvider>
           </div>
         </>
       );
